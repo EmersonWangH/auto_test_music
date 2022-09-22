@@ -15,4 +15,11 @@ pipeline{
             }
         }
     }
+    post {
+    always {
+        emailext body: 'test', 
+                 subject: 'test report', 
+                 to: '12345@qq.com'
+    }
+    }
 }
