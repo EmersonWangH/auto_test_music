@@ -17,6 +17,7 @@ pipeline{
     }
     post {
     always {
+        junit 'outputs/result.xml'
         emailext body: 'test', 
                  subject: 'test report', 
                  to: '12345@qq.com'
